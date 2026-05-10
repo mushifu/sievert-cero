@@ -3,10 +3,13 @@ import { supabase } from '../services/supabase'
 import { useAuthStore } from '../store/authStore'
 import { useNavigate } from 'react-router-dom'
 
+
 export default function Dashboard() {
 
   const user =
     useAuthStore((state) => state.user)
+    const logout =
+      useAuthStore((state) => state.logout)
 
   const [personajes, setPersonajes] =
     useState([])
@@ -39,11 +42,46 @@ const isMobile = window.innerWidth < 768
           'radial-gradient(circle at top, #1b2433 0%, #090c12 70%)',
         color: 'white',
         padding: '50px 30px',
+        position: 'relative',
         fontFamily: 'Arial, sans-serif'
       }}
     >
 
       {/* titulo */}
+      <button
+        onClick={() => {
+
+          logout()
+
+          navigate('/login')
+        }}
+
+        style={{
+          position: 'absolute',
+          top: '30px',
+          right: '30px',
+
+          background: 'rgba(255,255,255,0.06)',
+
+          border: '1px solid rgba(255,255,255,0.12)',
+
+          color: 'white',
+
+          padding: '10px 16px',
+
+          borderRadius: '12px',
+
+          cursor: 'pointer',
+
+          backdropFilter: 'blur(10px)',
+
+          fontSize: '14px',
+
+          opacity: 0.8
+        }}
+      >
+        Cerrar sesión
+      </button>
       <div
         style={{
           marginBottom: '50px'
