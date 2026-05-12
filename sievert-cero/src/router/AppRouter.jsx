@@ -3,6 +3,8 @@ import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
 import CreateCharacter from '../pages/CreateCharacter'
 import ProtectedRoute from '../components/ProtectedRoute'
+import CharacterDetail from '../pages/CharacterDetail'
+import CharacterMaster from '../pages/CharacterMaster'
 
 export default function AppRouter() {
   return (
@@ -26,6 +28,14 @@ export default function AppRouter() {
               <CreateCharacter />
             </ProtectedRoute>
           }
+        />
+        <Route
+          path="/personaje/:id"
+          element={<CharacterDetail />}
+        />
+        <Route
+          path="/master/personaje/:id"
+          element={<CharacterMaster />}
         />
       </Routes>
     </BrowserRouter>

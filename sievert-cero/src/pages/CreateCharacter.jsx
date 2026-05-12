@@ -168,6 +168,7 @@ export default function CreateCharacter() {
         }
         setFinalizing(true)
         // guardar personaje
+        console.log(newData);
         const { error } = await supabase
           .from('Sievert_PJ')
           .insert({
@@ -1296,7 +1297,7 @@ export default function CreateCharacter() {
                       ) : field.type === 'select' ? (
                         <select
                           value={data[field.name] || ''}
-
+                            name={field.name}
                           onChange={(e) =>
                             setField(field.name, e.target.value)
                           }

@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 0;
+  color: white;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+}
+
+.image {
+  height: 320px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.85),
+      transparent 45%
+    );
+}
+
+.info {
+  padding: 20px;
+}
+
+.masterBadge {
+  display: inline-block;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.75;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.meta {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 14px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.trait {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  opacity: 0.9;
+}

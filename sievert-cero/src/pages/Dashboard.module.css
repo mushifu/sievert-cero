@@ -1,0 +1,174 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b2433 0%, #090c12 70%);
+  color: white;
+  padding: 50px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.greeting {
+  font-size: 18px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 42px;
+}
+
+.subtitle {
+  opacity: 0.45;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logoutButton {
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logoutButton:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.characterCard {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.04);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+  text-align: left;
+}
+
+.characterCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.characterImage {
+  height: 320px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.characterOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.85),
+      transparent 45%
+    );
+}
+
+.characterInfo {
+  padding: 20px;
+}
+
+.characterName {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.characterMeta {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.characterStats {
+  display: flex;
+  gap: 14px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.createCard {
+  border: 2px dashed rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.03);
+  border-radius: 24px;
+  min-height: 420px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.createCard:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-6px);
+}
+
+.createIcon {
+  font-size: 72px;
+  line-height: 1;
+  opacity: 0.7;
+}
